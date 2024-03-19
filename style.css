@@ -34,19 +34,26 @@
   }
 }
 
-  * {
+body {
     font-family: "Gotham", monospace;
-    margin: 0;
-    padding: 0;
+    overflow-x: hidden;
 }
-.background {margin-top: -150px;}
-
+.background {
+  margin-top: -150px;
+}
+.title {
+  color: #C5DB6F;
+}
+.title2 {
+  color:#0C5A4D;
+  font-family: "Gilroy-Bold";
+}
 .nav-link {
-  color: black;
+  color: black !important;
   position: center;
 }
 .nav-link:hover, .nav-link:active, .nav-link:focus, .nav-link:active{
-  color: #A5C046;
+  color: #A5C046 !important;
 }
 .navbar .nav-item .btn {
     letter-spacing: 0.05rem;
@@ -105,5 +112,11 @@ button {
 }
 .subscription {
 background-color: #C5DB6F;  
-font-family: "Gilroy-Bold";
+}
+h1 {
+  font-family: "Gilroy-Bold";
+}
+.team {
+  font-family: "Gilroy-Bold";
+  color: #C5DB6F;
 }

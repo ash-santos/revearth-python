@@ -43,138 +43,15 @@
                 </ul>
             </li>
             <li class="nav-item"> <!--Button for login that will be directed to a modal form-->
-              <button type="button" class="btn ms-1 fs-5" style="letter-spacing: 0.05rem; border-radius: 20px;" data-bs-toggle="modal" data-bs-target="#LoginModal" data-bs-whatever="@login">Log in</button>
+              <a class="nav-link" href="#profile">Profile</a>
             </li>
           </ul>
         </div>
       </div>
-    </nav>
+    </nav>  
 </header>
     <div class="background card">
       <img src="assets/rever.jpg" class="d-block w-100" style="margin-top: -70px;" alt="Philippine Image">
-    </div>
-
-    <!--Login Modal Form-->
-    <div class="modal fade" id="LoginModal"  aria-labelledby="LoginModalLabel" aria-hidden="true">
-      <div class="login modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header border-0">
-            <img src="assets/logo2.png" alt="" width="50" height="50">
-            <h5 class="modal-title w-100 fs-3 ms-5">LOG IN</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form action="login.php" method="post">
-              <div class="input-group">
-                <div class="input-group-addon">
-                  <i class="fa fa-user fa-2x ps-2 pt-1"></i> 
-                </div>
-                <input type="text" name="username" class="form-control mx-3 mb-3" id="Username" placeholder="Enter Username">
-              </div>
-              <div class="input-group">
-                <div class="input-group-addon">
-                  <i class="fa fa-lock fa-2x ps-2 ms-1 pt-1"></i>
-                </div>
-                <input type="password" name="password" class="form-control mx-3 mb-3" id="Password" placeholder="Enter Password">
-              </div>
-              <div class="login mt-3 text-center">
-                <button type="submit" class="button mx-auto w-25">Log in</button>
-              </div>
-              <div class="text-center fs-6 pt-4">
-                <a class="text-dark" href="#">Forgot Password?</a>
-              </div>
-            </form>
-          </div>
-          <p class="text-center fs-6 text-body">Create an account?
-            <!--Button for sign up that will be directed to sign up modal form-->
-            <a data-bs-toggle="modal" data-bs-target="#SignupModal" data-bs-whatever="@Signup" href="#SignupModal" data-bs-dismiss="modal">Sign up</a>
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!--Sign up Modal Form-->
-    <div class="modal fade" id="SignupModal" aria-labelledby="SignupModalLabel" aria-hidden="true">
-      <div class="sign up modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header border-0">
-            <img src="assets/logo2.png" width="50" height="50">
-            <h5 class="modal-title w-100 fs-3">REGISTRATION</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form action="registration.php">
-              <div class="row">
-                <div class="col-sm-6 col-md-6">
-                  <div class="form-group">
-                    <div class="mb-3">
-                      <label for="Firstname fs-5">Full Name</label>
-                      <input type="text" name="fullname" class="form-control" id="fullname" placeholder="Enter your Firstname">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-6">
-                  <div class="form-group">
-                    <div class="mb-3">
-                      <label for="Firstname fs-5"></label>
-                      <input type="text" name="fullname" class="form-control" id="fullname" placeholder="Enter your Lastname">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-6 col-md-6">
-                  <div class="form-group">
-                    <div class="mb-3">
-                      <label for="Username fs-5">Username</label>
-                      <input type="username" name="username" class="form-control" id="username" placeholder="Enter Username">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-6">
-                  <div class="form-group">
-                    <div class="mb-3">
-                      <label for="Phone number fs-5">Phone Number</label>
-                      <input type="number" name="PhoneNumber" class="form-control" id="PhoneNumber"
-                        placeholder="Enter Phone Number">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="Email fs-5">Email</label>
-                <input type="email" name="email" class="form-control" id="email" placeholder="Enter Email">
-              </div>
-              <div class="row">
-                <div class="col-sm-6 col-md-6">
-                  <div class="form-group">
-                    <div class="mb-3">
-                      <label for="Password fs-5">Password</span></label>
-                      <input type="password" name="password" class="form-control" id="Password" placeholder="Enter Password">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-6">
-                  <div class="form-group">
-                    <div class="mb-3">
-                      <label for="Password fs-5">Confirm Password</span></label>
-                      <input type="password" name="password" class="form-control" id="Password"
-                        placeholder="Enter Confirm Password">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="text-center">
-                <button type="button" class="button content-center mx-auto w-25">Sign Up</button>
-              </div>
-            </form>
-          </div>
-          <p class="text-center fs-6">Already have an account?
-            <a data-bs-toggle="modal" data-bs-target="#LoginModal" data-bs-whatever="@Login" href="#LoginModal"
-              data-bs-dismiss="modal">Log In</a>
-          </p>
-        </div>
-      </div>
     </div>
 
 <main>

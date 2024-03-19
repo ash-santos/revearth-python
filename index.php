@@ -1,10 +1,14 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="assets/logo2.png">
@@ -12,65 +16,70 @@
 </head>
 <body>
   <div id="home"></div>
-    <!--Navigation bar--> 
-<header class="sticky-top">
-    <nav class="navbar navbar-expand-md navbar-light p-1">
-      <div class="container">
-        <a class="navbar-brand" href="#home">
-          <img src="assets/logo2.png" alt="logo" width="50" height="50">
-          <span class="title fs-4" style="color: #A5C046;">Rev</span><span class="title2 fs-4">EARTH</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main" aria-controls="main" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end align-center" id="main">
-          <ul class="navbar-nav fs-5">
-            <li class="nav-item">
-              <a class="nav-link" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#service">Service</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#about" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
-                <ul class="dropdown-menu border-0 bg-light">
-                  <li> <a class="dropdown-item bg-light" href="#about">What we do</a></li>
-                  <li> <a class="dropdown-item bg-light" href="#customersbenefit">Customer's benefit</a></li>
-                  <li> <a class="dropdown-item bg-light" href="#RevEarth">About revEARTH</a></li>
-                  <li> <a class="dropdown-item bg-light" href="#team">Our Team</a></li>
-                  <li> <a class="dropdown-item bg-light" href="#partnership">Partnership</a></li>
-                  <li> <a class="dropdown-item bg-light" href="#contacts">Contacts</a></li>
-                </ul>
-            </li>
-            <li class="nav-item"> <!--Button for login that will be directed to a modal form-->
-              <button type="button" class="btn ms-1 fs-5" style="letter-spacing: 0.05rem; border-radius: 20px;" data-bs-toggle="modal" data-bs-target="#LoginModal" data-bs-whatever="@login">Log in</button>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-</header>
-    <div class="background card">
-      <img src="assets/rever.jpg" class="d-block w-100" style="margin-top: -70px;" alt="Philippine Image">
-    </div>
+    <!--This is the navigation bar--> 
+  <nav class="navbar navbar-expand-md navbar-light sticky-top p-1">
+  <div class="container">
+    <a class="navbar-brand" href="#home">
+      <img src="assets/logo2.png" class="me-2" alt="logo" width="50" height="50">
+      <span class="title fs-4">Rev</span><span class="title2 fs-4">EARTH</span>
+    </a>
 
-    <!--Login Modal Form-->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main" aria-controls="main" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end align-center" id="main">
+      <ul class="navbar-nav fs-5">
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#service">Service</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#about" role="button" id="dropdownMenuabout" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+          <ul class="dropdown-menu border-0 bg-light" ara-labelledby="dropdownMenuabout">
+            <li> <a class="dropdown-item bg-light" href="#about">What we do</a></li>
+            <li> <a class="dropdown-item bg-light" href="#customersbenefit">Customer's benefit</a></li>
+            <li> <a class="dropdown-item bg-light" href="#team">Our Team</a></li>
+            <li> <a class="dropdown-item bg-light" href="#partnership">Partnership</a></li>
+            <li> <a class="dropdown-item bg-light" href="#contacts">Contacts</a></li>
+
+          </ul>
+        </li>
+          <li class="nav-item"> <!--This is for the button of the login that will be directed to a modal form-->
+            <button type="button" class="btn ms-1 fs-5" data-bs-toggle="modal" data-bs-target="#LoginModal"
+              data-bs-whatever="@login">Log in</button>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="background card">
+  <img src="assets/rever.jpg" class="d-block w-100" alt="Philippine Image"> 
+    <div class="card-img-overlay">
+</div>
+</div>
+
+    <!--This is the login modal form-->
     <div class="modal fade" id="LoginModal"  aria-labelledby="LoginModalLabel" aria-hidden="true">
       <div class="login modal-dialog modal-dialog-centered">
         <div class="modal-content">
-          <div class="modal-header border-0">
+
+          <div class="modal-header border-bottom-0">
             <img src="assets/logo2.png" alt="" width="50" height="50">
-            <h5 class="modal-title w-100 fs-3 ms-5">LOG IN</h5>
+            <h5 class="modal-title w-100 fs-3 text ms-5">LOG IN</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
+
           <div class="modal-body">
             <form action="login.php" method="post">
-              <div class="input-group">
-                <div class="input-group-addon">
-                  <i class="fa fa-user fa-2x ps-2 pt-1"></i> 
+              
+                <div class="input-group">
+                  <div class="input-group-addon">
+                    <i class="fa fa-user fa-2x ps-2 pt-1"></i> 
+                  </div>
+                  <input type="text" name="username" class="form-control mx-3 mb-3" id="Username" placeholder="Enter Username">
                 </div>
-                <input type="text" name="username" class="form-control mx-3 mb-3" id="Username" placeholder="Enter Username">
-              </div>
               <div class="input-group">
                 <div class="input-group-addon">
                   <i class="fa fa-lock fa-2x ps-2 ms-1 pt-1"></i>
@@ -81,49 +90,51 @@
                 <button type="submit" class="button mx-auto w-25">Log in</button>
               </div>
               <div class="text-center fs-6 pt-4">
-                <a class="text-dark" href="#">Forgot Password?</a>
+                <a href="#">Forgot Password?</a>
               </div>
             </form>
           </div>
-          <p class="text-center fs-6 text-body">Create an account?
-            <!--Button for sign up that will be directed to sign up modal form-->
-            <a data-bs-toggle="modal" data-bs-target="#SignupModal" data-bs-whatever="@Signup" href="#SignupModal" data-bs-dismiss="modal">Sign up</a>
-          </p>
+            <p class="text-center fs-6 text-body">Create an account?
+              <a data-bs-toggle="modal" data-bs-target="#SignupModal" data-bs-whatever="@Signup" href="#SignupModal"
+                data-bs-dismiss="modal">Sign up</a>
+            </p>
         </div>
       </div>
     </div>
 
-    <!--Sign up Modal Form-->
+    <!--This is the sign up modal form-->
     <div class="modal fade" id="SignupModal" aria-labelledby="SignupModalLabel" aria-hidden="true">
       <div class="sign up modal-dialog modal-dialog-centered">
         <div class="modal-content">
-          <div class="modal-header border-0">
-            <img src="assets/logo2.png" width="50" height="50">
+
+          <div class="modal-header border-bottom-0">
+            <img src="assets/logo2.png" alt="" width="50" height="50">
             <h5 class="modal-title w-100 fs-3">REGISTRATION</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
+
           <div class="modal-body">
-            <form action="registration.php">
+            <form action="registration.php" method="post">
               <div class="row">
-                <div class="col-sm-6 col-md-6">
+                <div class="col-xs-6 col-sm-6 col-md-6">
                   <div class="form-group">
                     <div class="mb-3">
                       <label for="Firstname fs-5">Full Name</label>
-                      <input type="text" name="fullname" class="form-control" id="fullname" placeholder="Enter your Firstname">
+                      <input type="text" name="fullname" class="form-control" id="fullname" placeholder="Enter your First name">
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6 col-md-6">
+                <div class="col-xs-6 col-sm-6 col-md-6">
                   <div class="form-group">
                     <div class="mb-3">
                       <label for="Firstname fs-5"></label>
-                      <input type="text" name="fullname" class="form-control" id="fullname" placeholder="Enter your Lastname">
+                      <input type="text" name="lastname" class="form-control" id="lastname" placeholder="Enter your Last name">
                     </div>
                   </div>
                 </div>
               </div>
               <div class="row">
-                <div class="col-sm-6 col-md-6">
+                <div class="col-xs-6 col-sm-6 col-md-6">
                   <div class="form-group">
                     <div class="mb-3">
                       <label for="Username fs-5">Username</label>
@@ -131,11 +142,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6 col-md-6">
+                <div class="col-xs-6 col-sm-6 col-md-6">
                   <div class="form-group">
                     <div class="mb-3">
                       <label for="Phone number fs-5">Phone Number</label>
-                      <input type="number" name="PhoneNumber" class="form-control" id="PhoneNumber"
+                      <input type="tel" name="PhoneNumber" class="form-control" id="PhoneNumber"
                         placeholder="Enter Phone Number">
                     </div>
                   </div>
@@ -146,7 +157,7 @@
                 <input type="email" name="email" class="form-control" id="email" placeholder="Enter Email">
               </div>
               <div class="row">
-                <div class="col-sm-6 col-md-6">
+                <div class="col-xs-6 col-sm-6 col-md-6">
                   <div class="form-group">
                     <div class="mb-3">
                       <label for="Password fs-5">Password</span></label>
@@ -154,18 +165,18 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6 col-md-6">
+                <div class="col-xs-6 col-sm-6 col-md-6">
                   <div class="form-group">
                     <div class="mb-3">
                       <label for="Password fs-5">Confirm Password</span></label>
-                      <input type="password" name="password" class="form-control" id="Password"
+                      <input type="password" name="confirmPassword" class="form-control" id="Password"
                         placeholder="Enter Confirm Password">
                     </div>
                   </div>
                 </div>
               </div>
               <div class="text-center">
-                <button type="button" class="button content-center mx-auto w-25">Sign Up</button>
+                <button type="submit" class="button content-center mx-auto w-25">Sign Up</button>
               </div>
             </form>
           </div>
@@ -175,9 +186,9 @@
           </p>
         </div>
       </div>
-    </div>
-
-<main>
+    </div>  
+    
+    <main>
   <!--WHAT DO WE DO section on the dropdown menu of ABOUT button-->
   <section id="about" class="animate__animated animate__slow py-1">
     <div class="container">
