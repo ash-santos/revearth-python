@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/logo2.png">
+  <title>RevErth</title>
+</head>
+<body>
+  <!--This is the navigation bar--> 
+  <section class="navigation" id="home">
+
+<nav class="navbar navbar-expand-md navbar-light sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#home">
+      <img src="assets/logo2.png" class="" alt="logo" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main" aria-controls="main" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+   
+    <div class="collapse navbar-collapse justify-content-end align-center" id="main">
+      <ul class="nav fs-5">
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#service">Service</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#about" role="button" id="dropdownMenuabout" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+          <ul class="dropdown-menu border-0 bg-light" ara-labelledby="dropdownMenuabout">
+            <li> <a class="dropdown-item bg-light" href="#about">What we do</a></li>
+            <li> <a class="dropdown-item bg-light" href="#customersbenefit">Customer's benefit</a></li>
+            <li> <a class="dropdown-item bg-light" href="#">Our Team</a></li>
+            <li> <a class="dropdown-item bg-light" href="#">Partnership</a></li>
+            <li> <a class="dropdown-item bg-light" href="#">Contacts</a></li>
+
+          </ul>
+        </li>
+          <li class="nav-item"> <!--This is for the button of the login that will be directed to a modal form-->
+            <button type="button" class="btn ms-1 fs-5" data-bs-toggle="modal" data-bs-target="#LoginModal"
+              data-bs-whatever="@login">Log in</button>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <div class="background card">
+    <img src="assets/rever.jpg" class="d-block w-100" alt="Philippine Image"> 
+      <div class="card-img-overlay">
+  </div>
+</div>
+
+    <!--This is the login modal form-->
+    <div class="modal fade" id="LoginModal"  aria-labelledby="LoginModalLabel" aria-hidden="true">
+      <div class="login modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+          <div class="modal-header border-bottom-0">
+            <img src="logo2.png" alt="" width="50" height="50">
+            <h5 class="modal-title w-100 fs-3 text ms-5">LOG IN</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body">
+            <form action="action_page.php" method="post">
+              
+                <div class="input-group">
+                  <div class="input-group-addon">
+                    <i class="fa fa-user fa-2x ps-2 pt-1"></i> 
+                  </div>
+                  <input type="text" name="username" class="form-control mx-3 mb-3" id="Username" placeholder="Enter Username">
+>>>>>>> parent of d18a9e5 (updated)
+                </div>
+              <div class="input-group">
+                <div class="input-group-addon">
+                  <i class="fa fa-lock fa-2x ps-2 ms-1 pt-1"></i>
+                </div>
+                <input type="password" name="password" class="form-control mx-3 mb-3" id="Password" placeholder="Enter Password">
+              </div>
+              <div class="login mt-3 text-center">
+                <button type="submit" class="button mx-auto w-25">Log in</button>
+              </div>
+              <div class="text-center fs-6 pt-4">
+                <a href="#">Forgot Password?</a>
+              </div>
+            </form>
+          </div>
+            <p class="text-center fs-6 text-body">Create an account?
+              <a data-bs-toggle="modal" data-bs-target="#SignupModal" data-bs-whatever="@Signup" href="#SignupModal"
+                data-bs-dismiss="modal">Sign up</a>
+            </p>
+        </div>
+      </div>
+    </div>
+
+    <!--This is the sign up modal form-->
+    <div class="modal fade" id="SignupModal" aria-labelledby="SignupModalLabel" aria-hidden="true">
+      <div class="sign up modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+          <div class="modal-header border-bottom-0">
+            <img src="logo2.png" alt="" width="50" height="50">
+            <h5 class="modal-title w-100 fs-3">REGISTRATION</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body">
+            <form action="registration.php">
+              <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                  <div class="form-group">
+                    <div class="mb-3">
+                      <label for="Firstname fs-5">Full Name</label>
+                      <input type="text" name="fullname" class="form-control" id="fullname" placeholder="Enter your Firstname">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                  <div class="form-group">
+                    <div class="mb-3">
+                      <label for="Firstname fs-5"></label>
+                      <input type="text" name="fullname" class="form-control" id="fullname" placeholder="Enter your Lastname">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                  <div class="form-group">
+                    <div class="mb-3">
+                      <label for="Username fs-5">Username</label>
+                      <input type="username" name="username" class="form-control" id="username" placeholder="Enter Username">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                  <div class="form-group">
+                    <div class="mb-3">
+                      <label for="Phone number fs-5">Phone Number</label>
+                      <input type="number" name="PhoneNumber" class="form-control" id="PhoneNumber"
+                        placeholder="Enter Phone Number">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="Email fs-5">Email</label>
+                <input type="email" name="email" class="form-control" id="email" placeholder="Enter Email">
+              </div>
+              <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                  <div class="form-group">
+                    <div class="mb-3">
+                      <label for="Password fs-5">Password</span></label>
+                      <input type="password" name="password" class="form-control" id="Password" placeholder="Enter Password">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                  <div class="form-group">
+                    <div class="mb-3">
+                      <label for="Password fs-5">Confirm Password</span></label>
+                      <input type="password" name="password" class="form-control" id="Password"
+                        placeholder="Enter Confirm Password">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="button" class="button content-center mx-auto w-25">Sign Up</button>
+              </div>
+            </form>
+          </div>
+          <p class="text-center fs-6">Already have an account?
+            <a data-bs-toggle="modal" data-bs-target="#LoginModal" data-bs-whatever="@Login" href="#LoginModal"
+              data-bs-dismiss="modal">Log In</a>
+          </p>
+        </div>
+      </div>
+    </div>  
+    
+  <!--This is WHAT DO WE DO section on the dropdown of ABOUT button-->
+  <section id="about" class="animate__animated animate__slow py-1">
+    <div class="container">
+      <div class="card-group my-5">
+        <div class="row my-5">
+          <div class="card col-sm-10 col-md-9 col-lg-4 ms-5"> 
+            <img src="assets/reve.jpg" class="img-fluid" alt="...">
+          </div>
+            <div class="card col-sm-10 col-md-10 col-lg-7">
+              <div class="card-body text-center">
+                <h2 class="card-title fw-bold">GHG EMISSION INVENTORY</h2>
+                <p class="card">GHG emission iventory quantifies the emitted GHG in a certain period of time. It tracks the sources of the emission, assesses the carbon footprint, and monitors the progress of the reduction target. GHG emissions can be calculaed through different sectors like the energy sector which calculates the emission from energy produced and consumed, and the transportation sector which calculates the emission from vehicles used.</p>
+              </div>
+            </div>
+        </div>
+        <div class=" bg shadow-lg rounded-3 py-4 px-4 mb-4">
+          <div class="row ms-5">
+            <div class="col-sm-10 col-md-10 col-lg-7">
+              <div class="card-body">
+                <h2 class="card-title fw-bold">ENERGY AUDITING</h2>
+                <p class="card text-start">Energy auditing evaluates the efficiency of a building or faculty by assessing its energy consumption and consumption pattern. It provides solution and recommendations based on the analyzed data. Energy auditing contributes to energy conservation, cost-effectiveness, and energy management plan of the building or facility.</p>
+              </div> 
+           </div>
+            <div class="card col-sm-9 col-md-10 col-lg-4">
+              <img src="assets/img3.jpg" class="img-fluid" alt="...">
+            </div>
+          </div>
+        </div>
+        <div class="row my-5">
+          <div class="card col-sm-10 col-md-9 col-lg-4 ms-5"> 
+            <img src="assets/img2.jpg" class="img-fluid" alt="...">
+          </div>
+            <div class="card col-sm-10 col-md-10 col-lg-7">
+              <div class="card-body text-center">
+                <h2 class="card-title fw-bold">RA 11285</h2>
+                <h5 class="card fw-bold">Energy Efficient and Conservation Act</h5>
+                <p class="card">The Energy Efficient and Conservation Act makes energy conservation essential and institutionalizes in order to ensure that energy use becomes sustainable.</p>
+                <button type="button" class="button1 mx-auto w-30 px-3">Learn More</button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--This CUSTOMER'S BENEFITS section-->
+  <section id="customersbenefit" class="customer py-4">
+    <div class="container">
+        <h2 class="card-title text-center text-uppercase fw-bold">Customer's Benefit</h2>
+    <div class="card-group">
+      <div class="row my-3 text-center justify-content-center align-items-center">
+        <div class="col-sm-5 col-md-4 col-lg-2">
+          <div class="card justify-content-center align-items-center">          
+            <img src="assets/cb_icon1.png" class="img-fluid rounded-circle shadow-lg" width="150" alt="...">
+            <div class="card-body">
+              <p class="fw-bold">Energy and GHG Emissions Monitoring</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5 col-md-4 col-lg-2">
+          <div class="card justify-content-center align-items-center">
+            <img src="assets/cb_icon2.png" class="img-fluid rounded-circle shadow-lg" width="150" alt="...">
+            <div class="card-body">
+              <p class="fw-bold">Management and Reduction Opportunities</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5 col-md-4 col-lg-2">
+          <div class="card justify-content-center align-items-center">
+            <img src="assets/cb_icon3.png" class="img-fluid rounded-circle shadow-lg" width="150" alt="...">
+            <div class="card-body">
+              <p class="fw-bold">Capture Financial Returns from Energy Savings</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5 col-md-4 col-lg-2">
+          <div class="card justify-content-center align-items-center">
+            <img src="assets/cb_icon4.png" class="img-fluid rounded-circle shadow-lg" width="150" alt="...">
+            <div class="card-body">
+              <p class="fw-bold">Reduce Environmental Impact</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+    <!--This About RevEarth section-->
+  <section id="RevEarth" class="revearth reveal-fade animate__animated animate__slow my-5">
+    <div class="container justify-content-center align-items-center">
+      <div class="card-group">
+        <div class="row py-5">
+          <div class="col-sm-9 col-md-5 col-lg-4 ms-5">
+            <div class="card">
+              <img src="assets/rev.jpg" class="img-fluid rounded-circle" alt="image RevEarth">
+            </div>
+          </div>
+            <div class="card col-sm-10 col-md-5 ms-5 mt-5">
+              <div class="card-body text-center">
+                <h2 class="card-title fw-bold">RevEarth</h2>
+                <p class="card-text">We offer a user-friendly tool to institutions and businesses for energy consumptions and GHG emmissions calculation. We empower institutions and businesses in energy maangement by providing them all information necessary to unerstand energy usage and GHG emissions.</p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+    <!--This is the section of SUBSCRIPTION PLAN-->
+  <section class="subscription d-flex justify-content-center align-items-center h-100 min-vh-100 py-4">
+    <div class="container">
+      <h1 class="card-title text-center text-uppercase fw-bold pt-4 pb-3">Subcription Plan</h1>
+        <p class="text-center">Take your desired plan to get access to our service easily, we like to offer special license offer our users.</p>
+
+      <div class="row g-5 px-5 py-3 border-0 text-center">
+        <div class="col-md-4 col-lg-4">
+          <div class="card bg-light h-100 p-4">
+            <h3 class="card-title fw-bold pt-2 pb-4">BASIC</h3>
+            <p class="card-text mt-5 fw-bold mb-1">Energy Auditing</p>
+            <p>Total Kg of Co2e <br>
+            Individual Equipment Consumption</p>
+            <p class="card-text mt-1 fw-bold mb-1">GHG Inventory</p>
+            <p>Equipment Emissions <br>
+            Energy Analysis</p>
+            <button type="button" class="button1 mx-auto mt-auto w-30 px-3">GET STARTED</button>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-4">
+        <div class="card bg-light h-100 p-4">
+          <h3 class="card-title fw-bold pt-2 pb-4">STANDARD</h3>
+          <p class="card-text mt-5 fw-bold mb-1">Energy Auditing</p>
+          <p>Total Kg of Co2e <br>
+          Individual Equipment Consumption</p>
+          <p class="card-text mt-1 fw-bold mb-1">GHG Inventory</p>
+          <p>Equipment Emissions<br>
+            Cost Cutting Strategy <br>
+            Energy Analysis <br>
+            Decomposition Analysis</p>
+          <button type="button" class="button1 mx-auto mt-auto w-30 px-3">GET STARTED</button>
+      </div>
+    </div>
+    <div class="col-md-4 col-lg-4">
+      <div class="card bg-light h-100 p-4">
+        <h3 class="card-title fw-bold pt-2 pb-4">PREMIUM</h3>
+        <p class="card-text mt-5 fw-bold mb-1">Energy Auditing</p>
+        <p>Total Kg of Co2e <br>
+        Individual Equipment Consumption</p>
+        <p class="card-text mt-1 fw-bold mb-1">GHG Inventory</p>
+        <p>Equipment Emissions<br>
+          Transportation Emissions <br>
+          Energy Management Plan <br>
+          Cost Cutting Strategy <br>
+          Energy Analysis <br>
+          Decomposition Analysis <br>
+          Site Visit</p>
+        <button type="button" class="button1 mx-auto mt-auto w-30 px-3">GET STARTED</button>
+    </div>
+  </div>
+    </div>
+  </section>
+  <section class="team">
+    <div class="container">
+      <div class="card-title">The Team</div>
+    </div>
+  </section>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
